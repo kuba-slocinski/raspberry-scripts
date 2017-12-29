@@ -28,7 +28,7 @@ def calibrate(k,v):
       v += 0.5
     # kalibracja temp kotla: #7
     elif '28-041651d867ff' in k:
-      v += -4
+      v += 3
     # kalibracja temp CWU: #5
     elif '28-0000087ce525' in k:
       v += -1
