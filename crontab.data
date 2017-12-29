@@ -1,0 +1,5 @@
+# m h  dom mon dow   command
+
+0 0 * * * bash -C /home/kuba/scripts/ds18b20_temp_starter.sh
+0 0 * * * bash -C /home/kuba/scripts/input_starter.sh
+# 0 0 * * * bash -C /home/kuba/scripts/cpu_temp_starter.sh

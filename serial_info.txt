@@ -1,0 +1,15 @@
+fileds:
+- temperatura komina
+- temperatura zadana komina
+- pid.error
+- pid.kp
+- pid.ki
+- pid.P
+- pid.I
+- moc kotla wyliczona z algorytmu PI
+- moc kotla bez ograniczenia, wyliczona z algorytmi FPID.
+- moc rzeczywista kotla, ograniczona
+- temperatura zadana kotla
+- temperatura kotla
+- moc dmuchawy
+- podajnik wlaczony / wylaczony
