@@ -15,6 +15,15 @@ reads = 0
 # co_blower_speed
 # co_secs_to_feed
 
+# read old values from node_exporter file if exists:
+with open(node_exporter_file, 'r') as f:
+  d = {}
+  for line in f:
+    (key, val) = line.split()
+    d[key] = val
+  if 'co_feeder_sum_secs' in d.keys():
+    co_feeder_sum_secs = int(d['co_feeder_sum_secs'])
+
 # store data for NodeExporter
 def dump_data(data):
   with open(node_exporter_file+'.tmp', 'w') as f:
