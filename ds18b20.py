@@ -25,13 +25,13 @@ This script gathers data and:
 def calibrate(k,v):
     # kalibracja mieszacza: #3.5
     if '28-0316467e11ff' in k:
-      v += 0.5
+      v += 3.5
     # kalibracja temp kotla: #7
     elif '28-041651d867ff' in k:
       v += 3
     # kalibracja temp CWU: #5
     elif '28-0000087ce525' in k:
-      v += -1
+      v += 2.5
     # CWU na powrocie #0
     elif '28-041651311dff' in k:
       v += 0
