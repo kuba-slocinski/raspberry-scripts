@@ -4,7 +4,7 @@
   },
   "editable": true,
   "gnetId": null,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "hideControls": false,
   "id": 2,
   "links": [],
@@ -93,6 +93,12 @@
               "bars": true,
               "legend": false,
               "yaxis": 2
+            },
+            {
+              "alias": "kocioł - ustawione",
+              "color": "#DEDAF7",
+              "fill": 0,
+              "legend": false
             }
           ],
           "span": 12,
@@ -105,7 +111,7 @@
               "legendFormat": "kocioł",
               "metric": "co_temp_actual",
               "refId": "A",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "temp_cwu",
@@ -113,7 +119,7 @@
               "legendFormat": "CWU",
               "metric": "temp_cwu",
               "refId": "B",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "temp_mieszacza",
@@ -121,7 +127,7 @@
               "legendFormat": "mieszacz",
               "metric": "temp_mieszacza",
               "refId": "C",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "temp_cyrkulacji",
@@ -129,7 +135,7 @@
               "legendFormat": "cyrkulacja",
               "metric": "temp_cyrkulacji",
               "refId": "E",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "podajnik",
@@ -137,7 +143,7 @@
               "legendFormat": "podajnik",
               "metric": "podajnik",
               "refId": "D",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "co_temp_set",
@@ -145,15 +151,15 @@
               "legendFormat": "kocioł - ustawione",
               "metric": "co_temp_set",
               "refId": "F",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "temp_kotla",
               "intervalFactor": 2,
-              "legendFormat": "kocioł (ds18b20)",
+              "legendFormat": "kocioł (zewn.)",
               "metric": "temp_kotla",
               "refId": "G",
-              "step": 20
+              "step": 4
             }
           ],
           "thresholds": [
@@ -252,7 +258,7 @@
               "legendFormat": "ilość podanego węgla [s]",
               "metric": "co_feeder_sum_secs",
               "refId": "A",
-              "step": 20
+              "step": 4
             },
             {
               "expr": "co_secs_to_feed",
@@ -260,7 +266,7 @@
               "legendFormat": "time to feed",
               "metric": "co_secs_to_feed",
               "refId": "B",
-              "step": 20
+              "step": 4
             }
           ],
           "thresholds": [],
@@ -332,7 +338,7 @@
               "legendFormat": "{{instance}}: {{mountpoint}}",
               "metric": "node_filesystem_free",
               "refId": "A",
-              "step": 60
+              "step": 20
             }
           ],
           "thresholds": [],
@@ -404,7 +410,7 @@
               "legendFormat": "{{instance}}",
               "metric": "node_load1",
               "refId": "A",
-              "step": 60
+              "step": 20
             }
           ],
           "thresholds": [
@@ -512,7 +518,7 @@
               "legendFormat": "",
               "metric": "node_boot_time",
               "refId": "A",
-              "step": 240
+              "step": 60
             }
           ],
           "thresholds": "0.5,1",
@@ -569,7 +575,7 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -593,5 +599,5 @@
   },
   "timezone": "browser",
   "title": "home",
-  "version": 36
+  "version": 39
 }
