@@ -1,34 +1,9 @@
-1. add serial reader:
-# /var/lib/node_exporter/textfile_collector/serial.prom
-#
-# co_temp_set
-# co_temp_actual
-# co_feeder_state
-# co_feeder_sum_secs
-# co_blower_speed
-# co_secs_to_feed
-
-2. add switch control based on temp_cyrkulacji:
-3. add switch state on chart
-# circ_pump_state
-4. add button for coal make up (on input)
-# + trigger that will reset feeder_sum_secs
-5. reverse feeder_sum_secs on the dashboard to decrease till 0
-
-
-#################################################################
-#
-# /var/lib/node_exporter/textfile_collector/ds18b20.prom
-# temp_cwu 39.6
-# temp_cyrkulacji 30.6
-# temp_kotla 41.3
-# temp_mieszacza 31.7
-
-def storeForNodeExporter(input):
-    with open(node_exporter_path+"/ds18b20.data", "w") as f:
-        for sensor, temperature in sorted(input.items()):
-            f.write(str(sensor)+" "+str(temperature))
-            f.write("\n")
-        f.close()
-    # now, atomic operation: rename file:
-    os.rename(node_exporter_path+"/ds18b20.data", node_exporter_path+"/ds18b20.prom");
+- simplify reset of co_feeder_sum_secs when coal added
+- add external temp monitoring
+- add annotations of how much coal added
+- add switch control based on temp_cyrkulacji:
+- add switch state on chart
+  # circ_pump_state
+- add button for coal make up (on input)
+  # + trigger that will reset feeder_sum_secs
+- reverse feeder_sum_secs on the dashboard to decrease till 0
