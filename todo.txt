@@ -1,5 +1,4 @@
 - simplify reset of co_feeder_sum_secs when coal added
-- add external temp monitoring
 - add annotations of how much coal added
 - add mean coal [s] feeded per day on chart
 - add switch control based on temp_cyrkulacji:
@@ -8,3 +7,5 @@
 - add button for coal make up (on input)
   # + trigger that will reset feeder_sum_secs
 - reverse feeder_sum_secs on the dashboard to decrease till 0
+- remove code for thingspeak.com
+- cleanup code
