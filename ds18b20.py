@@ -26,9 +26,9 @@ def calibrate(k,v):
     # kalibracja mieszacza: #3.5
     if '28-0316467e11ff' in k:
       v += 3.5
-    # kalibracja temp kotla: #7
-    elif '28-041651d867ff' in k:
-      v += 3
+    # kalibracja temp zewn: #0
+    elif '28-0516b427b9ff' in k:
+      v += 0
     # kalibracja temp CWU: #5
     elif '28-0000087ce525' in k:
       v += 2.5
@@ -69,16 +69,17 @@ if __name__ == "__main__":
     # dictionary for each sensor and device location
     w1= { 'field2': '/sys/bus/w1/devices/28-0000087ce525/w1_slave',
           'field3': '/sys/bus/w1/devices/28-0316467e11ff/w1_slave',
-          'field4': '/sys/bus/w1/devices/28-041651d867ff/w1_slave',
+          'field4': '/sys/bus/w1/devices/28-0516b427b9ff/w1_slave',
           'field5': '/sys/bus/w1/devices/28-041651311dff/w1_slave'}
     w2= {'field2': 'temp_cwu',
          'field3': 'temp_mieszacza',
-         'field4': 'temp_kotla',
+         'field4': 'temp_zewn',
          'field5': 'temp_cyrkulacji'}
     # field1: internal : cpu_temp
     # field2: ce525 : temp. CWU
     # field3: e11ff : temp. mieszacza
     # field4: 867ff : temp. kotla
+    # field4: 7b9ff : temp. zewn.
     
     print "starting temperature readings on: " + str(datetime.now())
     while True:
